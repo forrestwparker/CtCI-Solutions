@@ -16,7 +16,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
          */
 
         // Part 1
-        // Assumes source contains unicode 16-bit characters. (Matches char type in C#)
+        // Assumes source contains unicode 16-bit characters. (Matches char type in C#.)
         // Assumes no null strings as input.
         // Returns true on empty strings (since no characters exist).
         // Arguably O(1) runtime (although O(n) for small n), O(n) space
