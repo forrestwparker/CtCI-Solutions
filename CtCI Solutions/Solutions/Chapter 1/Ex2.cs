@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Solutions.Chapter_1
 {
-    static partial class Solution
+    public static class Ex2
     {
         /* Exercise 2
          * 
@@ -16,7 +16,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
         // Assumes source contains unicode 16-bit characters. (Matches char type in C#.)
         // Assumes no null strings.
         // O(|str1|) == O(|str2|) runtime (although O(1) if |str1| != |str2|), O(|str1|) == O(|str2|) space
-        static bool ArePermutations(string str1, string str2)
+        public static bool ArePermutations(string str1, string str2)
         {
             // If the strings are different lengths, they cannot be permutations.
             if (str1.Length != str2.Length) { return false; }

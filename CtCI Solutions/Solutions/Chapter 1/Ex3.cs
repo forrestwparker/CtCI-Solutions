@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Solutions.Chapter_1
 {
-    static partial class Solution
+    public static class Ex3
     {
         /* Exercise 3
          * 
@@ -18,7 +18,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
 
         // Using char[] as strings in C# are immutable.
         // O(n) runtime, O(1) space
-        static void ReplaceSpaces(char[] array, int trueLength)
+        public static void ReplaceSpaces(char[] array, int trueLength)
         {
             // Count the number of spaces in the "true" part of the string.
             var spaceCount = 0;

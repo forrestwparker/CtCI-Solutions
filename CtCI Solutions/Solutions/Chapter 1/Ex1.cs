@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Solutions.Chapter_1
 {
-    static partial class Solution
+    public static class Ex1
     {
         /* Exercise 1
          * 
@@ -20,7 +20,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
         // Assumes no null strings as input.
         // Returns true on empty strings (since no characters exist).
         // Arguably O(1) runtime (although O(n) for small n), O(n) space
-        static bool ContainsUniqueChars(string source)
+        public static bool ContainsUniqueChars(string source)
         {
             // If source contains more characters than the distinct allowable characters (65536), return false.
             if (source.Length > 65536) { return false; }
@@ -45,7 +45,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
 
         // Part 2
         // Arguably O(1) runtime (although O(n^2) for small n), O(1) space
-        static bool ContainsUniqueChars_NoExtraDataStructures(string source)
+        public static bool ContainsUniqueChars_NoExtraDataStructures(string source)
         {
             // If source contains more characters than the distinct allowable characters (65536), return false.
             if (source.Length > 65536) { return false; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Solutions.Chapter_1
 {
-    static partial class Solution
+    public static class Ex
     {
         /* Exercise <#>
          * 

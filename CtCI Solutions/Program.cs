@@ -11,8 +11,6 @@ namespace CtCI_Solutions
     {
         static void Main(string[] args)
         {
-            var check = Solution.IsPalindromePermutation("taco cat");
-            Console.WriteLine(check);
         }
     }
 }
