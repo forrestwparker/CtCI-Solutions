@@ -31,7 +31,7 @@ namespace CtCI_Solutions.Solutions.Chapter_1
             // Check if each character in source has been encountered before. If so, return false. Else, flag its occurrance.
             foreach (var character in source)
             {
-                var charValue = (int)Char.GetNumericValue(character);
+                var charValue = (int)character;
                 if (characterIsInSource[charValue] == true)
                 {
                     return false;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CtCI_Solutions.Solutions.Chapter_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace CtCI_Solutions
     {
         static void Main(string[] args)
         {
+            var check = Solution.IsPalindromePermutation("taco cat");
+            Console.WriteLine(check);
         }
     }
 }
