@@ -47,6 +47,8 @@
     <Compile Include="Solutions\Chapter 1\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex3.cs" />
     <Compile Include="Solutions\Chapter 1\Ex4.cs" />
+    <Compile Include="Solutions\Chapter 1\Ex5.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex1.cs" />
     <Compile Include="Solutions\Template.cs" />
     <Compile Include="Solutions\Chapter 1\Ex2.cs" />
   </ItemGroup>
