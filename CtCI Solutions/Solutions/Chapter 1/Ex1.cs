@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Solutions
 {
-    public partial class Ch1
+    public partial class Ch1 // Chapter Number
     {
-        public static class Ex1
+        public static class Ex1 // Exercise number
         {
             /* Exercise 1.1
              * 
