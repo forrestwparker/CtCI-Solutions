@@ -53,6 +53,13 @@
     <Compile Include="Solutions\Chapter 1\Ex7.cs" />
     <Compile Include="Solutions\Chapter 1\Ex6.cs" />
     <Compile Include="Solutions\Chapter 2\Ex1.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex3.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex4.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex5.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex6.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex7.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex8.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex2.cs" />
     <Compile Include="Solutions\Template.cs" />
     <Compile Include="Solutions\Chapter 1\Ex2.cs" />
   </ItemGroup>
