@@ -1,4 +1,4 @@
-﻿using CtCI_Solutions.Solutions.Chapter_1;
+﻿using CtCI_Solutions.Solutions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

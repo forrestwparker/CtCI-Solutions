@@ -15,7 +15,41 @@ namespace CtCI_Solutions.Solutions
              * Queue via Stacks: Implement a 'MyQueue' class which implements a queue using two stacks.
              */
 
-            // <Code>
+            public class MyQueue<T>
+            {
+                private Stack<T> BackOfQueue = new Stack<T>();
+                private Stack<T> FrontOfQueue = new Stack<T>();
+
+                public void Enqueue(T element)
+                {
+                    BackOfQueue.Push(element);
+                }
+
+                public T Dequeue()
+                {
+                    if (FrontOfQueue.Count == 0)
+                    {
+                        if (BackOfQueue.Count == 0) { } // Throw error
+                        MoveBackToFront()
+                    }
+                    return FrontOfQueue.Pop();
+                }
+
+                public T Peek()
+                {
+                    if (FrontOfQueue.Count == 0)
+                    {
+                        if (BackOfQueue.Count == 0) { } // Throw error
+                        MoveBackToFront();
+                    }
+                    return FrontOfQueue.Peek();
+                }
+
+                private void MoveBackToFront()
+                {
+                    while (BackOfQueue.Count > 0) { FrontOfQueue.Push(BackOfQueue.Pop()); }
+                }
+            }
         }
     }
 }
