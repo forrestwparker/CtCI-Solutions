@@ -17,6 +17,8 @@ namespace CtCI_Solutions.Solutions
 
             public class MyQueue<T>
             {
+                // BackOfQueue receives all queueing elements (at the back of the queue).
+                // FrontOfQueue holds elements ready to be dequeued (at the front of the queue).
                 private Stack<T> BackOfQueue = new Stack<T>();
                 private Stack<T> FrontOfQueue = new Stack<T>();
 
@@ -25,6 +27,7 @@ namespace CtCI_Solutions.Solutions
                     BackOfQueue.Push(element);
                 }
 
+                // When FrontOfQueue is empty, move all elementes from BackOfQueue onto FrontOfQueue.
                 public T Dequeue()
                 {
                     if (FrontOfQueue.Count == 0)
@@ -35,6 +38,7 @@ namespace CtCI_Solutions.Solutions
                     return FrontOfQueue.Pop();
                 }
 
+                // Same as above.
                 public T Peek()
                 {
                     if (FrontOfQueue.Count == 0)
@@ -45,6 +49,7 @@ namespace CtCI_Solutions.Solutions
                     return FrontOfQueue.Peek();
                 }
 
+                // To move elements to FrontOfQueue, simply invert the BackOfQueue stack.
                 private void MoveBackToFront()
                 {
                     while (BackOfQueue.Count > 0) { FrontOfQueue.Push(BackOfQueue.Pop()); }

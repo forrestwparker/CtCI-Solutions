@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CtCI Solutions", "CtCI Solutions\CtCI Solutions.csproj", "{0899A3CD-63B5-4111-903A-2BDAC19FD5C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CtCI Tests", "CtCI Tests\CtCI Tests.csproj", "{34966C4E-13D8-4147-B21C-91B83F149229}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0899A3CD-63B5-4111-903A-2BDAC19FD5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0899A3CD-63B5-4111-903A-2BDAC19FD5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0899A3CD-63B5-4111-903A-2BDAC19FD5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34966C4E-13D8-4147-B21C-91B83F149229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34966C4E-13D8-4147-B21C-91B83F149229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34966C4E-13D8-4147-B21C-91B83F149229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34966C4E-13D8-4147-B21C-91B83F149229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

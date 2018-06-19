@@ -22,8 +22,30 @@ namespace CtCI_Solutions.Solutions
              * 'dequeueAny', 'dequeueDog', and 'dequeueCat'.
              * You may use the built-in LinkedList data structure.
              */
+            
+            public class Animal
+            {
+                public readonly DateTime ArrivalTime = DateTime.Now;
+            }
 
-            // <Code>
+            public class Cat: Animal { }
+            public class Dog: Animal { }
+
+            public class AnimalShelter
+            {
+                private Queue<Dog> DogQueue = new Queue<Dog>();
+                private Queue<Cat> CatQueue = new Queue<Cat>();
+
+                public void Enqueue(Animal animal)
+                {
+
+                }
+
+                public Animal DequeueAny()
+                {
+                    switch
+                }
+            }
         }
     }
 }
