@@ -1,10 +1,9 @@
 ﻿using System;
-using static CtCI_Solutions.Solutions.Ch1.Ex1; // Chapter number, Exercise Number
+using CtCI_Solutions.Solutions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CtCI_Tests
 {
-    [TestClass]
     public partial class Chapter1Tests // Chapter number
     {
         [TestClass]
