@@ -24,6 +24,8 @@ namespace CtCI_Solutions.Solutions
              */
 
             // Using char[] as strings in C# are immutable.
+            // Assume no null char array.
+            // Empty char[] changes nothing.
             // O(n) runtime, O(1) space
             public static void ReplaceSpaces(char[] array, int trueLength)
             {
@@ -45,9 +47,9 @@ namespace CtCI_Solutions.Solutions
                     if (array[pointer] != ' ') { array[pointer + 2 * spaceCount] = array[pointer]; }
                     else
                     {
-                        array[pointer] = '%';
-                        array[pointer + 1] = '2';
-                        array[pointer + 2] = '0';
+                        array[pointer + 2* spaceCount - 2] = '%';
+                        array[pointer + 2 * spaceCount - 1] = '2';
+                        array[pointer + 2 * spaceCount] = '0';
                         spaceCount--;
                     }
                 }
