@@ -1,5 +1,5 @@
 ﻿using System;
-using static CtCI_Solutions.Solutions.Ch1.Ex1;
+using CtCI_Solutions.Solutions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CtCI_Tests
@@ -15,7 +15,7 @@ namespace CtCI_Tests
             {
                 var testString = "";
                 const bool expectedResult = true;
-                var actualResult = ContainsUniqueChars(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -24,7 +24,7 @@ namespace CtCI_Tests
             {
                 var testString = new String('A', 100000);
                 const bool expectedResult = false;
-                var actualResult = ContainsUniqueChars(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -33,7 +33,7 @@ namespace CtCI_Tests
             {
                 var testString = "ASDFGHJKLQWERTYUIOPZXCVBNMasdfghjklqwertyuiopzxcvbnm\\<>?,./;':\"{}|1234567890!@#$%^&*()-=_+`~ \n";
                 const bool expectedResult = true;
-                var actualResult = ContainsUniqueChars(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -42,7 +42,7 @@ namespace CtCI_Tests
             {
                 var testString = "asdfghjklqwertyuiopzxcvbnmASDFGHJKLQ WERTYUIOPZXCVBNMu";
                 const bool expectedResult = false;
-                var actualResult = ContainsUniqueChars(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -51,7 +51,7 @@ namespace CtCI_Tests
             {
                 var testString = "";
                 const bool expectedResult = true;
-                var actualResult = ContainsUniqueChars_NoExtraDataStructures(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars_NoExtraDataStructures(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -60,7 +60,7 @@ namespace CtCI_Tests
             {
                 var testString = new String('A', 100000);
                 const bool expectedResult = false;
-                var actualResult = ContainsUniqueChars_NoExtraDataStructures(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars_NoExtraDataStructures(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -69,7 +69,7 @@ namespace CtCI_Tests
             {
                 var testString = "ASDFGHJKLQWERTYUIOPZXCVBNMasdfghjklqwertyuiopzxcvbnm\\<>?,./;':\"{}|1234567890!@#$%^&*()-=_+`~ \n";
                 const bool expectedResult = true;
-                var actualResult = ContainsUniqueChars_NoExtraDataStructures(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars_NoExtraDataStructures(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 
@@ -78,7 +78,7 @@ namespace CtCI_Tests
             {
                 var testString = "asdfghjklqwertyuiopzxcvbnmASDFGHJKLQ WERTYUIOPZXCVBNMu";
                 const bool expectedResult = false;
-                var actualResult = ContainsUniqueChars_NoExtraDataStructures(testString);
+                var actualResult = Ch1.Ex1.ContainsUniqueChars_NoExtraDataStructures(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
         }
