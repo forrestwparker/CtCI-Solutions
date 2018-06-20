@@ -33,7 +33,7 @@ namespace CtCI_Solutions.Solutions
                     if (FrontOfQueue.Count == 0)
                     {
                         if (BackOfQueue.Count == 0) { } // Throw error
-                        MoveBackToFront()
+                        MoveBackToFront();
                     }
                     return FrontOfQueue.Pop();
                 }
