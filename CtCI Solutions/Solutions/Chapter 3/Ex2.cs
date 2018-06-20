@@ -35,18 +35,26 @@ namespace CtCI_Solutions.Solutions
 
                 // The top of MinStack is popped off if it is equal to the value popped off of Stack
                 // (i.e., when the minimum value of Stack is being removed).
+                // Throw an exception if the stack is empty.
                 public int Pop()
                 {
-                    if (Stack.Count == 0) { } // Throw error
+                    if (Stack.Count == 0)
+                    {
+                        throw new System.InvalidOperationException("Cannot pop from an empty stack.");
+                    }
                     var topOfStack = Stack.Pop();
                     if (topOfStack == MinStack.Peek()) { MinStack.Pop(); }
                     return topOfStack;
                 }
 
                 // The top element of MinStack is always the minimum value of Stack.
+                // Throw an exception if the stack is empty.
                 public int Min()
                 {
-                    if (MinStack.Count == 0) { } // Throw error
+                    if (MinStack.Count == 0)
+                    {
+                        throw new System.InvalidOperationException("Empty stack has no min value.");
+                    }
                     return MinStack.Peek();
                 }
             }

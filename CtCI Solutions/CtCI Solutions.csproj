@@ -53,6 +53,7 @@
     <Compile Include="Solutions\Chapter 1\Ex7.cs" />
     <Compile Include="Solutions\Chapter 1\Ex8.cs" />
     <Compile Include="Solutions\Chapter 1\Ex9.cs" />
+    <Compile Include="Solutions\Chapter 3\Ex2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

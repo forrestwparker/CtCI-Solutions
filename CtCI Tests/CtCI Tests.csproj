@@ -52,6 +52,7 @@
     <Compile Include="Chapter 1\Ex2Tests.cs" />
     <Compile Include="Chapter 1\Ex3Tests.cs" />
     <Compile Include="Chapter 1\Ex4Tests.cs" />
+    <Compile Include="Chapter 3\Ex2Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
