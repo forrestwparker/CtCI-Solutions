@@ -11,6 +11,15 @@ namespace CtCI_Tests
         public class Ex1Tests
         {
             [TestMethod]
+            public void Method1NullString()
+            {
+                string testString = null;
+                const bool expectedResult = true;
+                var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+
+            [TestMethod]
             public void Method1EmptyString()
             {
                 var testString = "";
@@ -43,6 +52,15 @@ namespace CtCI_Tests
                 var testString = "asdfghjklqwertyuiopzxcvbnmASDFGHJKLQ WERTYUIOPZXCVBNMu";
                 const bool expectedResult = false;
                 var actualResult = Ch1.Ex1.ContainsUniqueChars(testString);
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+
+            [TestMethod]
+            public void Method2NullString()
+            {
+                string testString = null;
+                const bool expectedResult = true;
+                var actualResult = Ch1.Ex1.ContainsUniqueChars_NoExtraDataStructures(testString);
                 Assert.AreEqual(expectedResult, actualResult);
             }
 

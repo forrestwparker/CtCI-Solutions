@@ -10,6 +10,28 @@ namespace CtCI_Tests
         public class Ex2Tests // Exercise number
         {
             [TestMethod]
+            public void FirstStringNull()
+            {
+                var str = "askgjhlk";
+                var isNullString = false;
+                try { Ch1.Ex2.ArePermutations(null, str); }
+                catch { isNullString = true; }
+                const bool expectedResult = true;
+                Assert.AreEqual(expectedResult, isNullString);
+            }
+
+            [TestMethod]
+            public void SecondStringNull()
+            {
+                var str = "asjdkglahsd";
+                var isNullString = false;
+                try { Ch1.Ex2.ArePermutations(str, null); }
+                catch { isNullString = true; }
+                const bool expectedResult = true;
+                Assert.AreEqual(expectedResult, isNullString);
+            }
+
+            [TestMethod]
             public void EmptyStrings()
             {
                 var str = "";

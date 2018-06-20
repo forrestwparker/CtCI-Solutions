@@ -19,11 +19,13 @@ namespace CtCI_Solutions.Solutions
 
             // Part 1
             // Assumes source contains unicode 16-bit characters. (Matches char type in C#.)
-            // Assumes no null strings as input.
             // Returns true on empty strings (since no characters exist).
             // Arguably O(1) runtime (although O(n) for small n), O(n) space
             public static bool ContainsUniqueChars(string source)
             {
+                // If source is null, return true.
+                if (source == null) { return true; }
+
                 // If source contains more characters than the distinct allowable characters (65536), return false.
                 if (source.Length > 65536) { return false; }
 
@@ -49,6 +51,9 @@ namespace CtCI_Solutions.Solutions
             // Arguably O(1) runtime (although O(n^2) for small n), O(1) space
             public static bool ContainsUniqueChars_NoExtraDataStructures(string source)
             {
+                // If source is null, return true.
+                if (source == null) { return true; }
+
                 // If source contains more characters than the distinct allowable characters (65536), return false.
                 if (source.Length > 65536) { return false; }
 

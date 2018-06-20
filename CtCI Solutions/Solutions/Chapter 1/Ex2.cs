@@ -20,6 +20,10 @@ namespace CtCI_Solutions.Solutions
             // O(|str1|) == O(|str2|) runtime (although O(1) if |str1| != |str2|), O(|str1|) == O(|str2|) space
             public static bool ArePermutations(string str1, string str2)
             {
+                // If either string is null, throw exception.
+                if (str1 == null) { throw new System.ArgumentNullException("str1"); }
+                if (str2 == null) { throw new System.ArgumentNullException("str2"); }
+
                 // If the strings are different lengths, they cannot be permutations.
                 if (str1.Length != str2.Length) { return false; }
 
