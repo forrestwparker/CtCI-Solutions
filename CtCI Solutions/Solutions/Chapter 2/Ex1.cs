@@ -30,7 +30,7 @@ namespace CtCI_Solutions.Solutions
                 var node = head;
                 while (node.Next != null)
                 {
-                    if (dupList.Contains(node.Next.data)) { node.RemoveNext(); }
+                    if (dupList.Contains(node.Next.data)) { node.DeleteNext(); }
                     else
                     {
                         node = node.Next;
@@ -51,7 +51,7 @@ namespace CtCI_Solutions.Solutions
                     var runner = node;
                     while (runner.Next != null)
                     {
-                        if (node.data == runner.Next.data) { runner.RemoveNext(); }
+                        if (node.data == runner.Next.data) { runner.DeleteNext(); }
                         else { runner = runner.Next; }
                     }
                     node = node.Next;

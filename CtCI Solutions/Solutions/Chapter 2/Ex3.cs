@@ -22,7 +22,13 @@ namespace CtCI_Solutions.Solutions
              * Result:  nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
              */
 
-            // <Code>
+            // O(1) runtime, O(1) space
+            public static void DeleteMiddleNode(LinkedList.Node node)
+            {
+                if (node.Next == null) { throw new System.ArgumentException("Cannot delete terminal node."); }
+                node.data = node.Next.data;
+                node.DeleteNext();
+            }
         }
     }
 }

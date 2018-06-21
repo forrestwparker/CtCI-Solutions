@@ -15,7 +15,7 @@ namespace CtCI_Solutions.Solutions
                 public Node Next;
                 public int data;
 
-                public void RemoveNext()
+                public void DeleteNext()
                 {
                     if (Next != null) { Next = Next.Next; }
                 }
