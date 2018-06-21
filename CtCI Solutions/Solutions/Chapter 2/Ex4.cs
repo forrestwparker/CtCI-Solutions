@@ -19,8 +19,34 @@ namespace CtCI_Solutions.Solutions
              * The partition element x can appear anywhere in the "right partition;"
              * it does not need to appear between the left and right partitions.
              */
-
-            // <Code>
+             
+            // Create a new linked list with head node newHead and tail node newTail.
+            // O(n) runtime, O(1) space
+            public static LinkedList.Node PartitionAround(LinkedList.Node head, int value)
+            {
+                if (head == null) { throw new System.ArgumentNullException("head"); }
+                var newHead = head;
+                var newTail = head;
+                var currentNode = head.Next;
+                head.Next = null;
+                while (currentNode != null)
+                {
+                    var nextNode = currentNode.Next;
+                    if (currentNode.data < value)
+                    {
+                        currentNode.Next = newHead;
+                        newHead = currentNode;
+                    }
+                    else
+                    {
+                        currentNode.Next = null;
+                        newTail.Next = currentNode;
+                        newTail = currentNode;
+                    }
+                    currentNode = nextNode;
+                }
+                return newHead;
+            }
         }
     }
 }
