@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,43 @@ namespace CtCI_Solutions.Solutions
              * How would you solve this problem if a temporary buffer is not allowed?
              */
 
-            // <Code>
+            // Part 1
+            // Assumes each node contains int data.
+            // O(n) runtime, O(n) space
+            public static void RemoveDuplicates(LinkedList.Node head)
+            {
+                if (head == null) { throw new System.ArgumentNullException("head"); }
+                var dupList = new List<int> { head.data };
+                var node = head;
+                while (node.Next != null)
+                {
+                    if (dupList.Contains(node.Next.data)) { node.RemoveNext(); }
+                    else
+                    {
+                        node = node.Next;
+                        dupList.Add(node.data);
+                    }
+                }
+            }
+
+            // Part 2
+            // Assumes each node contains int data.
+            // O(n^2) runtime, O(1) space
+            public static void RemoveDuplicates_NoBuffer(LinkedList.Node head)
+            {
+                if (head == null) { throw new System.ArgumentNullException("head"); }
+                var node = head;
+                while (node.Next != null)
+                {
+                    var runner = node;
+                    while (runner.Next != null)
+                    {
+                        if (node.data == runner.Next.data) { runner.RemoveNext(); }
+                        else { runner = runner.Next; }
+                    }
+                    node = node.Next;
+                }
+            }
         }
     }
 }

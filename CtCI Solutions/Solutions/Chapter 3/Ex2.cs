@@ -17,8 +17,8 @@ namespace CtCI_Solutions.Solutions
              * 'Push', 'pop', and 'min' should all operate in O(1) time.
              */
 
-            // Assuming this stack can be used exclusively for int values.
-            // MyStack.Pop will throw an error if empty.
+            // Assuming this stack will be used exclusively for int values.
+            // MyStack.Pop will throw an error if the stack is empty.
             public class MyStack
             {
                 // Stack holds the stack.
@@ -38,11 +38,9 @@ namespace CtCI_Solutions.Solutions
                 // Throw an exception if the stack is empty.
                 public int Pop()
                 {
-                    if (Stack.Count == 0)
-                    {
-                        throw new System.InvalidOperationException("Cannot pop from an empty stack.");
-                    }
-                    var topOfStack = Stack.Pop();
+                    int topOfStack;
+                    try { topOfStack = Stack.Pop(); }
+                    catch (Exception ex) { throw; }
                     if (topOfStack == MinStack.Peek()) { MinStack.Pop(); }
                     return topOfStack;
                 }
