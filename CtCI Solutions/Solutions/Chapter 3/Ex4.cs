@@ -19,6 +19,7 @@ namespace CtCI_Solutions.Solutions
             {
                 // BackOfQueue receives all queueing elements (at the back of the queue).
                 // FrontOfQueue holds elements ready to be dequeued (at the front of the queue).
+                // O(1) runtime
                 private Stack<T> BackOfQueue = new Stack<T>();
                 private Stack<T> FrontOfQueue = new Stack<T>();
 
@@ -28,28 +29,31 @@ namespace CtCI_Solutions.Solutions
                 }
 
                 // When FrontOfQueue is empty, move all elementes from BackOfQueue onto FrontOfQueue.
+                // O(n) worst-case runtime (where n is the number of elements in the queue)
                 public T Dequeue()
                 {
                     if (FrontOfQueue.Count == 0)
                     {
-                        if (BackOfQueue.Count == 0) { } // Throw error
+                        if (BackOfQueue.Count == 0) { throw new System.InvalidOperationException("Cannot dequeue from an empty queue."); }
                         MoveBackToFront();
                     }
                     return FrontOfQueue.Pop();
                 }
 
-                // Same as above.
+                // When FrontOfQueue is empty, move all elementes from BackOfQueue onto FrontOfQueue.
+                // O(n) worst-case runtime (where n is the number of elements in the queue)
                 public T Peek()
                 {
                     if (FrontOfQueue.Count == 0)
                     {
-                        if (BackOfQueue.Count == 0) { } // Throw error
+                        if (BackOfQueue.Count == 0) { throw new System.InvalidOperationException("Cannot peek into an empty queue."); }
                         MoveBackToFront();
                     }
                     return FrontOfQueue.Peek();
                 }
 
-                // To move elements to FrontOfQueue, simply invert the BackOfQueue stack.
+                // To move elements to FrontOfQueue, invert the BackOfQueue stack.
+                // O(n) runtime (where n is the number of elements in BackOfQueue)
                 private void MoveBackToFront()
                 {
                     while (BackOfQueue.Count > 0) { FrontOfQueue.Push(BackOfQueue.Pop()); }
