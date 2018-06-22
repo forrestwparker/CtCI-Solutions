@@ -18,7 +18,35 @@ namespace CtCI_Solutions.Solutions
              * The stack supports the following operations: 'push', 'pop', 'peek', and 'isEmpty'.
              */
 
-            // <Code>
+            // Assume int data in the stack.
+            // O(n log n) runtime, O(n) space
+            public static void SortStack(Stack<int> stack)
+            {
+                if (stack == null) { throw new System.ArgumentNullException(); }
+                var tempStack = new Stack<int>();
+
+                // For each item in stack, insert it into tempStack at the appropriate place 
+                while (stack.Count > 0)
+                {
+                    var currentItem = stack.Pop();
+
+                    // Transfer items from tempStack to stack until top of tempStack is less than or equal to currentItem.
+                    // Count the number of items transferred this way with transferCount.
+                    var transferCount = 0;
+                    while (tempStack.Count > 0 && tempStack.Peek() > currentItem)
+                    {
+                        stack.Push(tempStack.Pop());
+                        transferCount++;
+                    }
+
+                    // Push currentItem on tempStack, then transfer the other previously moved items back on top.
+                    tempStack.Push(currentItem);
+                    for(; transferCount > 0; transferCount--) { tempStack.Push(stack.Pop()); }
+                }
+                
+                // Invert tempStack back onto stack.
+                while (tempStack.Count > 0) { stack.Push(tempStack.Pop()); }
+            }
         }
     }
 }
