@@ -53,12 +53,14 @@
     <Compile Include="Solutions\Chapter 2\Ex3.cs" />
     <Compile Include="Solutions\Chapter 2\Ex4.cs" />
     <Compile Include="Solutions\Chapter 2\Ex6.cs" />
+    <Compile Include="Solutions\Chapter 2\Ex7.cs" />
     <Compile Include="Solutions\Chapter 2\LinkedList.cs" />
     <Compile Include="Solutions\Chapter 3\Ex1.cs" />
     <Compile Include="Solutions\Chapter 3\Ex2.cs" />
     <Compile Include="Solutions\Chapter 3\Ex3.cs" />
     <Compile Include="Solutions\Chapter 3\Ex4.cs" />
     <Compile Include="Solutions\Chapter 3\Ex5.cs" />
+    <Compile Include="Solutions\Chapter 3\Ex6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
