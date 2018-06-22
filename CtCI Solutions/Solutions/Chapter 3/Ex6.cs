@@ -35,15 +35,54 @@ namespace CtCI_Solutions.Solutions
             {
                 private Queue<Dog> DogQueue = new Queue<Dog>();
                 private Queue<Cat> CatQueue = new Queue<Cat>();
+                public int AnimalCount
+                {
+                    get { return DogCount + CatCount; }
+                }
+                public int DogCount
+                {
+                    get { return DogQueue.Count; }
+                }
+                public int CatCount
+                {
+                    get { return CatQueue.Count; }
+                }
 
                 public void Enqueue(Animal animal)
                 {
-
+                    switch (animal)
+                    {
+                        case Cat cat:
+                            CatQueue.Enqueue(cat);
+                            break;
+                        case Dog dog:
+                            DogQueue.Enqueue(dog);
+                            break;
+                        default:
+                            break;
+                    }
                 }
 
                 public Animal DequeueAny()
                 {
-                    switch
+                    if (AnimalCount == 0) { throw new System.InvalidOperationException("Cannot dequeue from an empty shelter."); }
+                    if (DogCount == 0) { return CatQueue.Dequeue(); }
+                    if (CatCount == 0) { return DogQueue.Dequeue(); }
+                    return (DogQueue.Peek().ArrivalTime < CatQueue.Peek().ArrivalTime) 
+                        ? DogQueue.Dequeue() 
+                        : (Animal)CatQueue.Dequeue();
+                }
+
+                public Dog DequeueDog()
+                {
+                    if (DogCount == 0) { throw new System.InvalidOperationException("Cannot dequeue Dog when there are no dogs."); }
+                    return DogQueue.Dequeue();
+                }
+
+                public Cat DequeueCat()
+                {
+                    if (CatCount == 0) { throw new System.InvalidOperationException("Cannot dequeue Cat when there are no cats."); }
+                    return CatQueue.Dequeue();
                 }
             }
         }
