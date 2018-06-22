@@ -69,7 +69,7 @@ namespace CtCI_Solutions.Solutions
                 while (ncArray[0].Node.Equals(ncArray[1].Node))
                 {
                     ncArray[0].Node = ncArray[0].Node.Next;
-                    ncArray[1].Node = ncArray[1].sNode.Next;
+                    ncArray[1].Node = ncArray[1].Node.Next;
                 }
                 return ncArray[0].Node;
             }

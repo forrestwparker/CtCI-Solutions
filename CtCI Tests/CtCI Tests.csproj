@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chapter 16\Ex1Tests.cs" />
     <Compile Include="Chapter 1\Ex1Tests.cs" />
     <Compile Include="Chapter 1\Ex2Tests.cs" />
     <Compile Include="Chapter 1\Ex3Tests.cs" />

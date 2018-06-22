@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solutions\Chapter 16\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex2.cs" />
     <Compile Include="Solutions\Chapter 1\Ex3.cs" />
@@ -66,6 +67,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Solutions\Chapter 10\" />
+    <Folder Include="Solutions\Chapter 17\" />
+    <Folder Include="Solutions\Chapter 4\" />
+    <Folder Include="Solutions\Chapter 5\" />
+    <Folder Include="Solutions\Chapter 8\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
