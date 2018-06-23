@@ -8,12 +8,11 @@ namespace CtCI_Solutions.Solutions
 {
     public partial class Ch16 // Chapter Number
     {
-        public static class Ex // Exercise number
+        public static class Ex14 // Exercise number
         {
-            /* Exercise 16.1
+            /* Exercise 16.14
              * 
-             * Number Swapper: Write a function to swap a number in place
-             * (that is, without temporary variables).
+             * Best Line: Given a two-dimensional graph with points on it, find a line which passes the most number of points.
              */
 
         }

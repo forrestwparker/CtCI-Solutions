@@ -8,12 +8,15 @@ namespace CtCI_Solutions.Solutions
 {
     public partial class Ch16 // Chapter Number
     {
-        public static class Ex // Exercise number
+        public static class Ex18 // Exercise number
         {
-            /* Exercise 16.1
+            /* Exercise 16.18
              * 
-             * Number Swapper: Write a function to swap a number in place
-             * (that is, without temporary variables).
+             * Pattern Matching: You are given two strings, 'pattern' and 'value'.
+             * The 'pattern' string consists of just the letters 'a' and 'b', describing a pattern within a string.
+             * For example, the string 'catcatgocatgo' matches the pattern 'aabab' (where 'cat' is 'a' and 'go' is 'b').
+             * It also matches patterns like 'a', 'ab', and 'b'.
+             * Write a method to determine if 'value' matches 'pattern'.
              */
 
         }
