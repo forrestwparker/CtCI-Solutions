@@ -8,12 +8,12 @@ namespace CtCI_Solutions.Solutions
 {
     public partial class Ch16 // Chapter Number
     {
-        public static class Ex // Exercise number
+        public static class Ex24 // Exercise number
         {
-            /* Exercise 16.1
+            /* Exercise 16.24
              * 
-             * Number Swapper: Write a function to swap a number in place
-             * (that is, without temporary variables).
+             * Pairs with Sum: Design an algorithm to find all pairs of
+             * integers within an array which sum to a specified value.
              */
 
         }

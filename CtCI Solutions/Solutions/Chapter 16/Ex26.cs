@@ -8,12 +8,18 @@ namespace CtCI_Solutions.Solutions
 {
     public partial class Ch16 // Chapter Number
     {
-        public static class Ex // Exercise number
+        public static class Ex26 // Exercise number
         {
-            /* Exercise 16.1
+            /* Exercise 16.26
              * 
-             * Number Swapper: Write a function to swap a number in place
-             * (that is, without temporary variables).
+             * Calculator: Given an arithmetic expression consisting of
+             * positive integers, +, -, *, and / (no parentheses),
+             * compute the result.
+             * 
+             * EXAMPLE
+             * 
+             * Input: 2*3+5/6*3+15
+             * Output: 23.5
              */
 
         }
