@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solutions\Chapter 16\Ex11.cs" />
+    <Compile Include="Solutions\Chapter 16\Ex2.cs" />
     <Compile Include="Solutions\Chapter 16\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex2.cs" />
