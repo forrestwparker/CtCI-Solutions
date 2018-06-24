@@ -19,6 +19,53 @@ namespace CtCI_Solutions.Solutions
              * For example, Person (birth = 1908, death = 1909) is included in the counts for both 1908 and 1909.
              */
 
+            // O(n log n) runtime (due to sorting), O(n) space
+            // Other "optimal" solutions exist which depend on range of birth and death years,
+            // but may be shorter or longer than this one.
+            public static int MostAlive(Person[] people)
+            {
+                // Exceptions
+                if (people == null) { throw new System.ArgumentNullException(); }
+                if (people.Length == 0) { throw new System.ArgumentException("Must have at least one person"); }
+
+                // Sort births and deaths into own arrays.
+                var births = people.Select(x => x.BirthYear).OrderBy(x => x).ToArray();
+                var deaths = people.Select(x => x.DeathYear).OrderBy(x => x).ToArray();
+
+                // Set up variables
+                var birthPointer = 0;
+                var deathPointer = 0;
+                var aliveCount = 0;
+                var max = 0;
+                var maxYear = births[0];
+
+                // Only need to iterate to end of births to find max alive year.
+                while (birthPointer < births.Length)
+                {
+                    // Births occur before deaths in same year, so birth <= death counts for birth first.
+                    if (births[birthPointer] <= deaths[deathPointer])
+                    {
+                        aliveCount++;
+                        if (aliveCount > max)
+                        {
+                            max = aliveCount;
+                            maxYear = births[birthPointer];
+                        }
+                        birthPointer++;
+                    }
+                    else
+                    {
+                        aliveCount--;
+                        deathPointer++;
+                    }
+                }
+            }
+
+            public struct Person
+            {
+                public int BirthYear;
+                public int DeathYear;
+            }
         }
     }
 }
