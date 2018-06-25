@@ -22,6 +22,14 @@ namespace CtCI_Solutions.Solutions
              * Output: (3, 9)
              */
 
+            public static int[] MiddleSortIndices(int[] array)
+            {
+                if (array == null) { throw new System.ArgumentNullException(); }
+                if (array.Length < 2) { throw new System.ArgumentException("must have at least two elements"); }
+
+                var leftEndIndex = leftEndIndex(array);
+                var rightEndIndex = rightEndIndex(array);
+            }
         }
     }
 }

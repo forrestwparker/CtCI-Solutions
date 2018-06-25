@@ -22,6 +22,30 @@ namespace CtCI_Solutions.Solutions
              * Output: 5 (i.e., {3, -2, 4})
              */
 
+            // Initialize sum and maxSum to 0.
+            // Add each element of array to sum.
+            // If sum exceeds maxSum, replace maxSum.
+            // Otherwise, if sum is ever negative, reset sum.
+            // O(n) runtime, O(1) space
+            public static int LargestSum(int[] array)
+            {
+                var sum = 0;
+                var maxSum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                    if (sum > maxSum)
+                    {
+                        maxSum = sum;
+                    }
+                    else if (sum < 0)
+                    {
+                        sum = 0;
+                    }
+                }
+                return maxSum;
+            }
+
         }
     }
 }
