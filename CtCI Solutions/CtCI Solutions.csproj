@@ -46,9 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\Chapter 16\Ex10.cs" />
     <Compile Include="Solutions\Chapter 16\Ex11.cs" />
-    <Compile Include="Solutions\Chapter 16\Ex16.cs" />
+    <Compile Include="Solutions\Chapter 16\Ex17.cs" />
     <Compile Include="Solutions\Chapter 16\Ex2.cs" />
     <Compile Include="Solutions\Chapter 16\Ex1.cs" />
+    <Compile Include="Solutions\Chapter 16\Ex21.cs" />
     <Compile Include="Solutions\Chapter 16\Ex23.cs" />
     <Compile Include="Solutions\Chapter 16\Ex25.cs" />
     <Compile Include="Solutions\Chapter 16\Ex5.cs" />

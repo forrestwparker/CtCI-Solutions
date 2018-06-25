@@ -29,6 +29,7 @@ namespace CtCI_Solutions.Solutions
             // O(n) runtime, O(1) space
             public static int LargestSum(int[] array)
             {
+                if (array == null) { throw new System.ArgumentNullException(); }
                 var sum = 0;
                 var maxSum = 0;
                 for (int i = 0; i < array.Length; i++)
