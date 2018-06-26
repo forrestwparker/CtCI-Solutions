@@ -54,6 +54,7 @@
     <Compile Include="Solutions\Chapter 16\Ex25.cs" />
     <Compile Include="Solutions\Chapter 16\Ex5.cs" />
     <Compile Include="Solutions\Chapter 16\Ex6.cs" />
+    <Compile Include="Solutions\Chapter 17\Ex3.cs" />
     <Compile Include="Solutions\Chapter 17\Ex2.cs" />
     <Compile Include="Solutions\Chapter 1\Ex1.cs" />
     <Compile Include="Solutions\Chapter 1\Ex2.cs" />
