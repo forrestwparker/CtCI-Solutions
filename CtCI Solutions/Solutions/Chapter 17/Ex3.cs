@@ -21,6 +21,7 @@ namespace CtCI_Solutions.Solutions
             // integer k between 0 and i (the index of the element in array).
             // If k < m, replace mset[k] with the element from array.
             // Resulting mset is generated from all possibilities uniformly.
+            // O(n) runtime, O(m) space.
             public static int[] RandomSet(int[] array, int m)
             {
                 if (array == null) { throw new System.ArgumentNullException("array"); }

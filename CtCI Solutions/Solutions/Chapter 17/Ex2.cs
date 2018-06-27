@@ -19,6 +19,9 @@ namespace CtCI_Solutions.Solutions
              */
 
             // Using values 0-51 to represent the cards.
+            //
+            // If it was written to shuffle a given array of generic objects:
+            // O(n) runtime, O(1) space
             public static int[] ShuffleDeck()
             {
                 var deck = Enumerable.Range(0, 52).ToArray();
