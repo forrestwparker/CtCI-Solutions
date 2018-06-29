@@ -11,7 +11,6 @@ namespace CtCI_Solutions
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
