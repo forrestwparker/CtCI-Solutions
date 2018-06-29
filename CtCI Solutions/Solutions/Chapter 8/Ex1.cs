@@ -18,7 +18,7 @@ namespace CtCI_Solutions.Solutions
              * Implement a method to count how many possible ways the child can run up the stairs.
              */
 
-            //
+            // O(n) runtime, O(1) space
             public static int ClimbingCount(int numberOfStairs)
             {
                 if (numberOfStairs <= 0) { throw new System.ArgumentOutOfRangeException("numberOfStairs", "must be positive"); }
