@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CtCI_Solutions.Algorithms
 {
-    public static class Sorts
+    public static partial class Sorts
     {
+        // Implements bubblesort
+        // Best: O(n) runtime
+        // Worst: O(n^2) runtime
         public static void BubbleSort(int[] array)
         {
             if (array == null) { throw new ArgumentNullException(); }
