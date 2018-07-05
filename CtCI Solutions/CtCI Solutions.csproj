@@ -81,6 +81,7 @@
     <Compile Include="Solutions\Chapter 3\Ex5.cs" />
     <Compile Include="Solutions\Chapter 3\Ex6.cs" />
     <Compile Include="Solutions\Chapter 8\Ex4.cs" />
+    <Compile Include="Solutions\Chapter 8\Ex6.cs" />
     <Compile Include="Solutions\Chapter 8\Ex5.cs" />
     <Compile Include="Solutions\Chapter 8\Ex11.cs" />
     <Compile Include="Solutions\Chapter 8\Ex1.cs" />
