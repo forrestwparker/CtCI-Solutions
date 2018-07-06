@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\Sorting\MergeSort.cs" />
     <Compile Include="Algorithms\Sorting\InsertionSort.cs" />
     <Compile Include="Algorithms\Sorting\BubbleSort.cs" />
+    <Compile Include="Data Structures\Nodes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\Chapter 16\Ex11.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="Solutions\Chapter 3\Ex4.cs" />
     <Compile Include="Solutions\Chapter 3\Ex5.cs" />
     <Compile Include="Solutions\Chapter 3\Ex6.cs" />
+    <Compile Include="Solutions\Chapter 4\Ex2.cs" />
+    <Compile Include="Solutions\Chapter 4\Ex3.cs" />
     <Compile Include="Solutions\Chapter 8\Ex4.cs" />
     <Compile Include="Solutions\Chapter 8\Ex6.cs" />
     <Compile Include="Solutions\Chapter 8\Ex5.cs" />
@@ -91,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Solutions\Chapter 10\" />
-    <Folder Include="Solutions\Chapter 4\" />
     <Folder Include="Solutions\Chapter 5\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
