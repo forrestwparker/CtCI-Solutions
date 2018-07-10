@@ -36,6 +36,14 @@ namespace CtCI_Solutions.Solutions
                         a = a - b;
                     }
                 }
+
+                // Alternative method which requires no check for overflow
+                public void Swap2()
+                {
+                    a = a ^ b;
+                    b = a ^ b;
+                    a = a ^ b;
+                }
             }
         }
     }

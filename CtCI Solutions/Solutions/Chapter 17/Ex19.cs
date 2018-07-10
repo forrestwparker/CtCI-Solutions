@@ -34,11 +34,63 @@ namespace CtCI_Solutions.Solutions
                 return (int)(fullSum - sum);
             }
 
-            // Finds the sum s and product p of the missing values by calculating the
-            // sum and product of 1 to N and subtracts (resp. divides) the sum and product
-            // of values in array.
-            // The missing values are s/2 +- sqrt(s^2/4 - p).
-            public static int[] FindMissingNumbers(int[] array)
+            // Alternate solution which should run faster than previous one by
+            // making BigInteger class unnecessary.
+            // Uses copied code from Ex 17.4 (which inspired this solution).
+            public static int FindMissingNumber2(int[] array)
+            {
+                if (array == null) { throw new ArgumentNullException(); }
+
+                var n = array.Length + 1;
+                var maxBinaryDigit = (int)Math.Log(n, 2);
+                var missingNumber = 0;
+
+                for (int digitPlace = 0; digitPlace <= maxBinaryDigit; digitPlace++)
+                {
+                    missingNumber |= GetParityBit(n, digitPlace) << digitPlace;
+                }
+
+                foreach (var value in array) { missingNumber ^= value; }
+                return missingNumber;
+            }
+
+            private static int GetParityBit(int n, int digitPlace)
+            {
+                if (n < 0) { throw new ArgumentOutOfRangeException("n", "must be nonnegative"); }
+                if (digitPlace < 0 || digitPlace > 31) { throw new ArgumentOutOfRangeException("digitPlace", "must be an integer between 0 and 31, inclusive"); }
+
+                if (digitPlace == 0)
+                {
+                    // For units digit, if n % 4 == 1 or 2, return 1.
+                    // Else, return 0.
+                    var nMod4 = n % 4;
+                    if (nMod4 == 1 || nMod4 == 2) { return 1; }
+                    else { return 0; }
+                }
+
+                // If digitPlace != 0 and n is even.
+                else if (n % 2 == 0)
+                {
+                    // Fast power of 2.
+                    var PowerOf2 = 1 << digitPlace;
+                    var nModP2plus1 = n % (PowerOf2 << 1);
+                    // If nModP2plus1 >= PowerOf2, return 1.
+                    // Else, return 0.
+                    return nModP2plus1 / PowerOf2;
+                }
+
+                // In all other cases, return 0.
+                else
+                {
+                    return 0;
+                }
+            }
+
+                // Finds the sum s and product p of the missing values by calculating the
+                // sum and product of 1 to N and subtracts (resp. divides) the sum and product
+                // of values in array.
+                // The missing values are s/2 +- sqrt(s^2/4 - p).
+                public static int[] FindMissingNumbers(int[] array)
             {
                 if (array == null) { throw new System.ArgumentNullException(); }
                 if (array.Length == 0) { return new int[] { 1, 2 }; }
