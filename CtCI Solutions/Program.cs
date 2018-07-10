@@ -1,4 +1,5 @@
-﻿using CtCI_Solutions.Solutions;
+﻿using CtCI_Solutions.Data_Structures;
+using CtCI_Solutions.Solutions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
