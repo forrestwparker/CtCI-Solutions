@@ -15,6 +15,14 @@ namespace CtCI_Solutions.Data_Structures
         {
             get { return Tree.Count; }
         }
+        public bool IsEmpty
+        {
+            get
+            {
+                if (Count == 0) { return true; }
+                else { return false; }
+            }
+        }
 
 
         public void Add(T item)
@@ -26,13 +34,13 @@ namespace CtCI_Solutions.Data_Structures
 
         public T Peek()
         {
-            if (Count == 0) { throw new Exception("Heap is empty"); }
+            if (IsEmpty) { throw new Exception("Heap is empty"); }
             return Tree.First();
         }
 
         public T Extract()
         {
-            if (Count == 0) { throw new Exception("Heap is empty"); }
+            if (IsEmpty) { throw new Exception("Heap is empty"); }
             var temp = Peek();
             Tree[0] = Tree.Last();
             Tree.RemoveAt(Count - 1);
