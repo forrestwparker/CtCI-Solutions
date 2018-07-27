@@ -10,40 +10,63 @@ namespace CtCI_Solutions.Algorithms
     {
         // Implements MergeSort
         // Always O(n log n) runtime
-        public static int[] MergeSort(int[] array)
+
+        // If array contains more than two elements, initialize helper array and call recursive function.
+        public static void MergeSort(int[] array)
         {
             if (array == null) { throw new ArgumentNullException(); }
-            if (array.Length == 0) { throw new ArgumentOutOfRangeException(); }
-            if (array.Length == 1) { return array; }
-            var len1 = array.Length / 2;
-            var len2 = array.Length - len1;
-            var array1 = new int[len1];
-            var array2 = new int[len2];
-            Array.Copy(array, array1, len1);
-            Array.Copy(array, len1, array2, 0, len2);
-            return Merge(MergeSort(array1), MergeSort(array2));
+            if (array.Length > 1)
+            {
+                var helper = new int[array.Length];
+                MergeSort(array, helper, 0, array.Length - 1);
+            }
         }
 
-        private static int[] Merge(int[] array1, int[] array2)
+        // If lowIndex == highIndex, array index range is already sorted.
+        // Otherwise, sort each half of index range, then merge.
+        private static void MergeSort(int[] array, int[] helper, int lowIndex, int highIndex)
         {
-            int[] array = new int[array1.Length + array2.Length];
-            var minlast = (array1.Last() <= array2.Last()) ? array1 : array2;
-            var maxlast = (array1.Last() <= array2.Last()) ? array2 : array1;
-            var maxIndex = 0;
-            var mainIndex = 0;
-            for (int i = 0; i < minlast.Length; i++)
+            if (lowIndex < highIndex)
             {
-                while (maxlast[maxIndex] < minlast[i])
-                {
-                    array[mainIndex] = maxlast[maxIndex];
-                    mainIndex++;
-                    maxIndex++;
-                }
-                array[mainIndex] = minlast[i];
-                mainIndex++;
+                var midIndex = lowIndex + (highIndex - lowIndex) / 2;
+                MergeSort(array, helper, lowIndex, midIndex);
+                MergeSort(array, helper, midIndex + 1, highIndex);
+                Merge(array, helper, lowIndex, midIndex, highIndex);
             }
-            Array.Copy(maxlast, maxIndex, array, mainIndex, maxlast.Length - maxIndex);
-            return array;
+        }
+
+        private static void Merge(int[] array, int[] helper, int lowIndex, int midIndex, int highIndex)
+        {
+            // Copy left range into helper in place
+            for(int i = lowIndex; i <= midIndex; i++)
+            {
+                helper[i] = array[i];
+            }
+
+            var leftPointer = lowIndex;
+            var rightPointer = midIndex + 1;
+            var copyToPointer = lowIndex;
+
+            while(leftPointer <= midIndex)
+            {
+                // Compare next element from both arrays
+                // If right range has elements remaining and next element is larger than next left element,
+                // copy right element to next open index in array
+                while(rightPointer <= highIndex && array[rightPointer] < helper[leftPointer])
+                {
+                    array[copyToPointer] = array[rightPointer];
+                    rightPointer++;
+                    copyToPointer++;
+                }
+
+                // Next element of left array is larger.
+                array[copyToPointer] = helper[leftPointer];
+                copyToPointer++;
+                leftPointer++;
+            }
+            // Loop may terminate without rightPointer reaching highIndex.
+            // If so, this means all of left range has been copied into place from helper array
+            // and remaining elements of right range are sorted and located correctly in array already.
         }
     }
 }

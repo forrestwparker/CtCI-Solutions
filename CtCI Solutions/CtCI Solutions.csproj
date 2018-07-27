@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\Sorting\MergeSort.cs" />
     <Compile Include="Algorithms\Sorting\InsertionSort.cs" />
     <Compile Include="Algorithms\Sorting\BubbleSort.cs" />
+    <Compile Include="Data Structures\HashTable.cs" />
     <Compile Include="Data Structures\Heap.cs" />
     <Compile Include="Data Structures\Nodes.cs" />
     <Compile Include="Program.cs" />
