@@ -8,8 +8,10 @@ namespace CtCI_Solutions.Algorithms
 {
     public static partial class Sorts
     {
-        // Implements MergeSort
+        // Implements MergeSort on an array of integers
         // Always O(n log n) runtime
+        // Always O(n) space
+        // Sorting is stable
 
         // If array contains more than two elements, initialize helper array and call recursive function.
         public static void MergeSort(int[] array)
@@ -37,11 +39,8 @@ namespace CtCI_Solutions.Algorithms
 
         private static void Merge(int[] array, int[] helper, int lowIndex, int midIndex, int highIndex)
         {
-            // Copy left range into helper in place
-            for(int i = lowIndex; i <= midIndex; i++)
-            {
-                helper[i] = array[i];
-            }
+            // Copy left range into helper at same indices
+            Array.Copy(array, lowIndex, helper, lowIndex, midIndex - lowIndex + 1);
 
             var leftPointer = lowIndex;
             var rightPointer = midIndex + 1;
@@ -49,9 +48,9 @@ namespace CtCI_Solutions.Algorithms
 
             while(leftPointer <= midIndex)
             {
-                // Compare next element from both arrays
-                // If right range has elements remaining and next element is larger than next left element,
-                // copy right element to next open index in array
+                // Compare next element from both ranges
+                // If right range has elements remaining and next element is larger than next left range element,
+                // copy right range element to next open index in array
                 while(rightPointer <= highIndex && array[rightPointer] < helper[leftPointer])
                 {
                     array[copyToPointer] = array[rightPointer];
@@ -59,7 +58,8 @@ namespace CtCI_Solutions.Algorithms
                     copyToPointer++;
                 }
 
-                // Next element of left array is larger.
+                // Next element of left range is larger
+                // Copy it into array from helper
                 array[copyToPointer] = helper[leftPointer];
                 copyToPointer++;
                 leftPointer++;

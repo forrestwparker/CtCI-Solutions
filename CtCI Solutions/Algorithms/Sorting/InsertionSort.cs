@@ -8,9 +8,11 @@ namespace CtCI_Solutions.Algorithms
 {
     public static partial class Sorts
     {
-        // Implements insertion sort
+        // Implements insertion sort on an array of integers
         // Best: O(n) runtime
         // Worst: O(n^2) runtime
+        // Always O(1) space
+        // Sorting is stable
         public static void InsertionSort(int[] array)
         {
             if (array == null) { throw new ArgumentNullException(); }
