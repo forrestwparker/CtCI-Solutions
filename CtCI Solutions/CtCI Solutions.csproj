@@ -50,6 +50,7 @@
     <Compile Include="Data Structures\BinarySearchTree.cs" />
     <Compile Include="Data Structures\Heap.cs" />
     <Compile Include="Data Structures\Nodes.cs" />
+    <Compile Include="Data Structures\RedBlackTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solutions\Chapter 16\Ex11.cs" />

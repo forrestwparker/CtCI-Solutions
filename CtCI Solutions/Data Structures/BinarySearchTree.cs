@@ -151,17 +151,22 @@ namespace CtCI_Solutions.Data_Structures
             if (newNode != null) { newNode.Parent = oldNode.Parent; }
         }
 
-        private class BSTNode
+        protected class BTNode<U>
         {
-            public BSTNode Parent;
-            public BSTNode LeftChild;
-            public BSTNode RightChild;
+            public U Parent;
+            public U LeftChild;
+            public U RightChild;
             public T Data;
 
-            public BSTNode(T data)
+            public BTNode(T data)
             {
                 Data = data;
             }
+        }
+
+        private class BSTNode: BTNode<BSTNode>
+        {
+            public BSTNode(T data): base(data) { }
         }
     }
 }
