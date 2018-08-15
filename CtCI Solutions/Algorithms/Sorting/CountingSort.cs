@@ -20,7 +20,7 @@ namespace CtCI_Solutions.Algorithms
             if (maxDigitValue < 0) { throw new ArgumentOutOfRangeException(); }
             if (array.Length > 1)
             {
-                var lastNegativeIndex = SortNegatives(array);
+                var lastNegativeIndex = PartitionNegatives(array);
                 if (lastNegativeIndex > 0)
                 {
                     CountingSort(array, maxDigitValue, 0, lastNegativeIndex, x => Math.Abs(x), true);
@@ -68,7 +68,7 @@ namespace CtCI_Solutions.Algorithms
         }
 
         // Returns last index containing a negative value, or -1 if array contains no negative values
-        public static int SortNegatives(int[] array)
+        public static int PartitionNegatives(int[] array)
         {
             if (array == null) { throw new ArgumentNullException(); }
             if (array.Length == 0) { return -1; }

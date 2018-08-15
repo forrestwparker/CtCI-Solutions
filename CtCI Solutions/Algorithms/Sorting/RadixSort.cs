@@ -20,7 +20,7 @@ namespace CtCI_Solutions.Algorithms
                 var negPosMaxValues = ArrayMaxNegPosAbs(array);
                 var negMax = negPosMaxValues.Item1;
                 var posMax = negPosMaxValues.Item2;
-                var lastNegativeIndex = (negMax == 0) ? -1 : SortNegatives(array);
+                var lastNegativeIndex = (negMax == 0) ? -1 : PartitionNegatives(array);
                 if (lastNegativeIndex > 0)
                 {
                     var maxDigit = Log2(negMax);
